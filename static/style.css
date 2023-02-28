@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(22, 22, 22);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+main {
+  padding: 25px 50px;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.2666666667);
+  box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main h1 {
+  font-weight: 400;
+}
+
+.wave {
+  animation: wave calc(var(--speed, 0) * 1s) infinite linear;
+  background-image: url("https://assets.codepen.io/605876/wave--infinite.svg");
+  background-size: 50% 100%;
+  bottom: -5%;
+  height: calc(var(--height, 0) * 1vh);
+  left: 0;
+  opacity: var(--opacity);
+  position: absolute;
+  right: 0;
+  width: calc(var(--width, 0) * 1vw);
+}
+
+@keyframes wave {
+  to {
+    transform: translate(-50%, 0);
+  }
+}
+.wave:nth-of-type(1) {
+  --height: 30;
+  --opacity: 0.3;
+  --speed: 65;
+  --width: 1200;
+}
+
+.wave:nth-of-type(2) {
+  --height: 20;
+  --opacity: 0.4;
+  --speed: 53.7;
+  --width: 800;
+}
+
+.wave:nth-of-type(3) {
+  --height: 13;
+  --opacity: 0.5;
+  --speed: 45;
+  --width: 500;
+}/*# sourceMappingURL=style.css.map */
